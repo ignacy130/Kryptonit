@@ -16,7 +16,7 @@ function message = DecodeImage(I)
     [R,G,B]=meanValue(im,pixel_x,pixel_y)
     message = message + num2str(hex2dec(num2str(G)))+num2str(hex2dec(num2str(B)))
     
-        if G!=0 && B!=0
+        if (G!=0 && B!=0)
             break; 
         end 
     end
