@@ -35,19 +35,23 @@ imwrite(kopia,'wyjscie.bmp');
 end
 
 function [R,G,B] = wartosc_bezwzgledna(R,next, G,part1, B,part2) 
-if R<=200 
-    R=R+next ;
-else R=R-next; 
-end
-if G<=200 
-    G=G+part1 ;
-else G=G-part1;
-end
-if B<=200 
-    B=B+part2;
-else
-    B=B-part2;
-end
+	if R+next<=200 
+	   R=R+next ;
+	else
+		R=R-next; 
+	end
+	
+	if G+part1<=200 
+	   G=G+part1 ;
+	else
+		G=G-part1;
+	end
+
+	if B+part2<=200 
+	    B=B+part2;
+	else
+	    B=B-part2;
+	end
 end 
 
 function [xx,yy] = lokalizacja_pixela(sx,x) 
