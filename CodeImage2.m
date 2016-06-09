@@ -73,7 +73,7 @@ end
 function [R, G, B] = meanValue(imt,pixel_x,pixel_y)%tu trzeba zmienic na srednia wartosc sasiadujacych pixeli, zapewne 'recznie' im(x-1,y) itd,trzeba pomijac pixele wychodzace poza zakres obrazu lub zmienic obraz wejsciowy na obraz minus krawedzie obrazu (wtedy wszystko robimy na obrazie bez krawedzi, ale srednia liczymy z obrazu z krawedziami i dzieki temu nigdy nie wychodzimy poza zakres)
 	pixel_x=pixel_x+1;
 	pixel_y=pixel_y+1;
-	R = 0;
-	G = 0; 
-	B = 0;      
+	R = mean2(imt(pixel_x-1:pixel_x+1,pixel_y-1:pixel_y+1,1));
+	G = mean2(imt(pixel_x-1:pixel_x+1,pixel_y-1:pixel_y+1,2)); 
+	B = mean2(imt(pixel_x-1:pixel_x+1,pixel_y-1:pixel_y+1,3));       
 end
