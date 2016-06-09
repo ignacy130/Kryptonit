@@ -1,4 +1,4 @@
-function [R, G, B] = meanValue(imt,x,y)
+function [R, G, B] = meanValue2(imt,x,y)
 
 	imtSize=size(imt)
 
