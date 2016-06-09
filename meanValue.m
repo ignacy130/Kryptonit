@@ -9,7 +9,7 @@ function [R, G, B] = meanValue2(imt,x,y)
 		topLeft=[x,y];
 	end
 
-	if(x!=1 && y==1) %TW
+	if(x~=1 && y==1) %TW
 		topLeft=[x-1,y];
 	end
 
@@ -18,7 +18,7 @@ function [R, G, B] = meanValue2(imt,x,y)
 		bottomRight=[x,y+1];
 	end
 
-	if(x==imtSize(1) && y!=1) %RW
+	if(x==imtSize(1) && y~=1) %RW
 		bottomRight=[x,y+1];
 	end
 
@@ -26,7 +26,7 @@ function [R, G, B] = meanValue2(imt,x,y)
 		bottomRight=[x,y];
 	end
 
-	if(x!=imtSize(1) && y==imtSize(2)) %BW
+	if(x~=imtSize(1) && y==imtSize(2)) %BW
 		bottomRight=[x+1,y];
 	end
 
@@ -35,7 +35,7 @@ function [R, G, B] = meanValue2(imt,x,y)
 		bottomRight=[x,y+1];
 	end
 
-	if(x==1 && y!=1) %LW
+	if(x==1 && y~=1) %LW
 		topLeft=[x,y-1];
 	end
 
