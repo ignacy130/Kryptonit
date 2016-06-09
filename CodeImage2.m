@@ -2,7 +2,7 @@ function Iw = CodeImage2(I,h)
 im=imread(I);
 sx=size(im,1);
 sy=size(im,2);
-s=size(h,2)
+s=size(h,2);
 
 %V1=reshape(I(:,:,1),sx*sy,1)'; V2=reshape(I(:,:,2),sx*sy,1)'; V3=reshape(I(:,:,3),sx*sy,1)';
 kopia=im(2:size(im,1)-1,2:size(im,2)-1,:);
@@ -28,7 +28,7 @@ for i=1:size(h,2) %przejdx po kazdej literze hasla pocz¹tkowego
 		[pixel_x,pixel_y]=lokalizacja_pixela(sx,tmp);	%liczymy x y po przesunieciu. pixel_x*sx+pixel_y=aktualny numer pixela
 end
 imshow(kopia);
-Iw=kopia;
+Iw=kopia
 imwrite(kopia,'wyjscie.bmp');
 end
 
