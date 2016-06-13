@@ -1,6 +1,6 @@
 function [R, G, B] = meanValue2(imt,x,y)
 
-	imtSize=size(imt)
+	imtSize=size(imt);
 
 	topLeft=[x-1,y-1];
 	bottomRight=[x+1,y+1];
@@ -40,9 +40,14 @@ function [R, G, B] = meanValue2(imt,x,y)
 	end
 
 	imtCopy = imt;
-	imtCopy(x,y) = 0;
-	smallM = imtCopy(toplLeft,bottomRight);
-	R = sum(smallM)(1)/(size(smallM)-1);
-	G = sum(smallM)(2)/(size(smallM)-1);
-	B = sum(smallM)(3)/(size(smallM)-1);
+	imtCopy(x,y,:) = 0;
+	smallM = imtCopy(topLeft,bottomRight,:);
+    sx=size(smallM,1);
+    sy=size(smallM,2);
+    tmpR=reshape(smallM(:,:,1),[sx*sy,1]);
+    tmpG=reshape(smallM(:,:,2),[sx*sy,1]);
+    tmpB=reshape(smallM(:,:,3),[sx*sy,1]);
+	R = sum(tmpR)/(sx*sy-1);
+	G = sum(tmpG)/(sx*sy-1);
+	B = sum(tmpB)/(sx*sy-1);
 end
