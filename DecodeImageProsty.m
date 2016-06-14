@@ -7,11 +7,11 @@ message='';
 for i=1:sx
     for j=1:sy
         if im(i,j,2)~=im2(i,j,2)
-            tmpG=abs(im2(i,j,2)-im(i,j,2));
+            tmpG=abs(double(im2(i,j,2))-double(im(i,j,2)));
             tmpG=dec2hex(tmpG);
             tmpG=num2str(tmpG);
             
-            tmpB=abs(im2(i,j,3)-im(i,j,3));
+            tmpB=abs(double(im2(i,j,3))-double(im(i,j,3)));
             tmpB=dec2hex(tmpB);
             tmpB=num2str(tmpB);
             
