@@ -11,7 +11,7 @@ Aby użyć programu należy z folderu ze skryptami uruchomić należy komendę n
 Zostanie utworzony plik `wyjscie.bmp` z zaszyfrowanym hasłem.
 
 Aby odczytać z niego hasło należy uruchomić komendę:
-`DecodeImageProsty('wyjscie.bmp', 'zuraw,jpg')`
+`DecodeImageProsty('zuraw,jpg', 'wyjscie.bmp')`
 
 Wypisane zostanie hasło `haslo`.
 
