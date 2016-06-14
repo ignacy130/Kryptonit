@@ -2,6 +2,9 @@
 
 Rozwiązanie zawiera dwie metody szyfrowania kodu w obrazkach: szyfrowanie na podstawie porównania dwóch obrazków oraz metodą średnich wartości w kanałach piksela.
 
+#### Kod źródłowy
+https://github.com/ignacy130/Kryptonit
+
 #### Autorzy:
 Paweł Kmiecik
 Maciej Trznadel
